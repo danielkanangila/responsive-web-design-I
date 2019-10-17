@@ -333,6 +333,9 @@ address span {
 }
 
 @media screen and (max-width: 950px) {
+    .container {
+        width: 80%;
+    }
     .navbar ul li a {
         padding: 1.09em 1em;
     }
@@ -385,19 +388,15 @@ address span {
 }
 
 @media screen and (max-width: 500px) { 
-	body {
-		padding-top: 0;
-	}
 	.navbar .container ul {
 		flex-direction: column;
 	}
 
 	.navbar {
-        position: relative;
 		height: 350px;
     }
     
-    .navbar ul li {
+    .navbar ul a {
         width: 100%;
         border-bottom: 1px solid #211d21;
     }
