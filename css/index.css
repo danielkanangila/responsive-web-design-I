@@ -390,14 +390,21 @@ address span {
 @media screen and (max-width: 500px) { 
 	.navbar .container ul {
 		flex-direction: column;
+		width: 100%;
 	}
 
 	.navbar {
 		height: 350px;
-    }
-    
-    .navbar ul a {
-        width: 100%;
+	}
+	
+	.navbar ul li {
+		width: 100%;
+	}
+	
+	.navbar ul li:first-child {
+		border-top: 1px solid #211d21;
+	}
+    .navbar ul li a {
         border-bottom: 1px solid #211d21;
     }
 
