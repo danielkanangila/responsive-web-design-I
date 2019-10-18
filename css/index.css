@@ -1,3 +1,426 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.navbar {
+	height: 50px;
+	width: 100%;
+	z-index: 1000;
+}
+
+.navbar .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar ul {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+.navbar ul li a {
+	display: block;
+	color: #b0b0b0;
+	font-size: 0.9rem;
+	position: relative;
+	padding: 1.09rem 1.5rem;
+	transition: .3s;
+	font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    color: #211d21;
+}
+
+.navbar ul li a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background-color: #211d21;
+	left: 0;
+	bottom: 0;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: .3s; 
+}
+
+.navbar ul li a:hover::after {
+	transform: scaleX(1);
+}
+
+.brand {
+	background: #fff url("../img/logo.png") no-repeat;
+	background-size: 100px;
+	background-position: .5rem 1rem;
+	content: '';
+	width: 120px;
+	padding: 1rem 1rem 2.15rem;
+}
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	height: 300px;
+	margin: 0 0 16px;
+	padding: 16px 0 50px;
+}
+
+.header-alt-left {
+	width: 67%;
+	font-size: 60px;
+	text-align: center;
+	margin-top: 1.5rem;
+}
+
+.header-alt-right {
+	width: 33%;
+	height: 303px;
+	content: ' ';
+	background-image: url('../img/header-img.png');
+	background-repeat: no-repeat;
+	background-size: 300px;
+	background-position: right;
+} 
+
+.header-alt-right img {
+	width: 300px;
+}
+
+.header-title {
+	margin-top: 17px;
+	font-size: 1.5rem;
+}
+
+.btn {
+	padding: 8px 50px 8px;
+	border: 1px solid #000;
+	transition: .3s;
+}
+
+.btn.btn-rounded {
+	border-radius: 5px;
+}
+
+.btn-sml {
+	padding: 6px 30px 8px;
+	background-color: #fff;
+}
+
+.btn:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.divider {
+	display: block;
+	content: '';
+	width: 100%;
+}
+
+.b-1 {
+	border-bottom: 1px solid #000;
+}
+
+.b-2 {
+	border-bottom: 2px solid #000;	
+}
+
+.mb-15 {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+.mt--17 {
+	margin-top: -17px;
+}
+
+.mt-70 {
+	margin-top: 70px;
+}
+
+.banner {
+	display: block;
+	width: 100%;
+	height: 185px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.services-info-img {
+	background-image: url('../img/services-info.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.banner.services-header-alt  {
+	background-image: url('../img/services-header.jpg');
+}
+
+.banner.mid-page-accent {
+	margin: 0px 0 40px;
+	background-image: url('../img/mid-page-accent.jpg');
+}
+
+.mid-page-accent img {
+	width: 100%;
+}
+
+.content-row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-flow: row wrap
+}
+
+.col-12 {
+	display: block;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.col-8 {
+	display: block;
+	width: 78%;
+}
+
+.col-6 {
+	display: block;
+	width: 48%;
+	margin-bottom: 2rem;
+}
+
+.col-3 {
+	display: block;
+	width: 33%;
+}
+
+.col-2 {
+	display: block;
+	width: 20%;
+}
+
+.sr-card {
+	background-color: #F4F3F4;
+	border: 1px solid #000000;
+	padding: 16px;
+}
+
+.sr-card-title {
+	font-size: 1rem;
+}
+
+.sr-facts-list {
+	list-style-type: square;
+	margin: 20px 0 0 20px;
+}
+
+.sr-facts-list li {
+	margin-bottom: 10px;
+}
+
+.services-info-img {
+	height: 325px;
+	
+}
+
+.bg-dark {
+	background-color: #0B1630;
+}
+
+img.pr-img {
+	width: 90%;
+}
+
+footer {
+	display: block;
+	margin-top: 40px;
+	padding: 30px 0 100px;
+	text-align: center;
+}
+
+address span {
+	display: block;
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    .container {
+        width: 80%;
+    }
+    .navbar ul li a {
+        padding: 1.09em 1em;
+    }
+}
+@media screen and (max-width: 800px) {
+	.navbar .container {
+		flex-direction: column-reverse;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.navbar {
+		height: 100px;
+	}
+    .brand,
+    .navbar ul {
+		margin: 0 auto;
+    }
+    .navbar ul li a {
+        font-size: 0.8em;
+        padding: 1.09em 1em;
+    }
+	.header-alt-right {
+		display: none;
+	}
+
+	.header-alt-left {
+		width: 100%;
+		text-align: center;
+	}
+
+	.banner {
+		height: 130px;
+	}
+
+	.col-12.pr-web-t .content-row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.pr-caption {
+		display: block;
+		margin: 0px;
+		position: relative;
+		left: 0;
+		width: 100%;
+		height: 160px;
+		box-shadow: -2px 4px 10px -7px rgba(0,0,0,0.41);
+	}
+}
+
+@media screen and (max-width: 500px) { 
+	.navbar .container ul {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.navbar {
+		height: 350px;
+	}
+	
+	.navbar ul li {
+		width: 100%;
+	}
+	
+	.navbar ul li:first-child {
+		border-top: 1px solid #211d21;
+	}
+    .navbar ul li a {
+        border-bottom: 1px solid #211d21;
+    }
+
+	.col-md {
+		width: 100%;
+	}
+
+	.mb-15-md {
+		margin-bottom: 18px;
+	}
+
+	.mt-md {
+		margin-top: -80px;
+	}
+
+	.mt--50-md {
+		margin-top: -50px;
+	}
+}
